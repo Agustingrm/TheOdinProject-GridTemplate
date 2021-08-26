@@ -1,0 +1,44 @@
+@import url(../framework/reset.css);
+@import url(../framework/framework.css);
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  align-items: center;
+  justify-items: center;
+  padding-top: 10px;
+}
+header .TOP {
+  font-size: 36px;
+  font-family: "Caesar Dressing", cursive;
+  color: #cc9543;
+  cursor: pointer;
+}
+header img {
+  height: 60px;
+  cursor: pointer;
+}
+header ul {
+  width: 100%;
+  margin-left: auto;
+  align-items: center;
+  justify-items: center;
+}
+header ul li {
+  font-size: 24px;
+  color: #4a4a4ab3;
+  cursor: pointer;
+}
+header .selected {
+  color: #000;
+}
+
+h1 {
+  font-size: 48px;
+  color: #cc9543;
+  text-align: center;
+  padding-top: 100px;
+}
+
+/*# sourceMappingURL=index.css.map */

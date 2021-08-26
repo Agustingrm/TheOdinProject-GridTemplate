@@ -1,0 +1,48 @@
+@import url(../framework/reset.css);
+@import url(../framework/framework.css);
+
+$norseFont: "Caesar Dressing", cursive;
+$bodyFont: "Open Sans", sans-serif;
+$norseYellow: #cc9543;
+$notSelectedLink: #4a4a4ab3;
+
+body {
+  font-family: $bodyFont;
+}
+
+header {
+  align-items: center;
+  justify-items: center;
+  padding-top: 10px;
+  .TOP {
+    font-size: 36px;
+    font-family: $norseFont;
+    color: $norseYellow;
+    cursor: pointer;
+  }
+  img {
+    height: 60px;
+    cursor: pointer;
+  }
+  ul {
+    width: 100%;
+    margin-left: auto;
+    align-items: center;
+    justify-items: center;
+    li {
+      font-size: 24px;
+      color: $notSelectedLink;
+      cursor: pointer;
+    }
+  }
+  .selected {
+    color: #000;
+  }
+}
+
+h1 {
+    font-size: 48px;
+    color: $norseYellow;
+    text-align: center;
+    padding-top: 100px;
+}
