@@ -4,7 +4,37 @@
 $norseFont: "Caesar Dressing", cursive;
 $bodyFont: "Open Sans", sans-serif;
 $norseYellow: #cc9543;
+$softGray: #4a4a4a;
 $notSelectedLink: #4a4a4ab3;
+
+@mixin cardFormat {
+  background-color: white;
+  .cardTitle {
+    font-size: 34px;
+    font-weight: 700;
+    color: $softGray;
+  }
+  .cardSubtitle {
+    font-size: 32px;
+    color: $softGray;
+  }
+  button {
+    background: none;
+    background-color: $norseYellow;
+    font-size: 28px;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+  }
+  .cardBottom {
+    padding: 30px 0;
+    font-size: 26px;
+    line-height: 40px;
+    color: $softGray;
+  }
+}
 
 body {
   font-family: $bodyFont;
@@ -19,6 +49,7 @@ header {
     font-family: $norseFont;
     color: $norseYellow;
     cursor: pointer;
+    justify-self: left;
   }
   img {
     height: 60px;
@@ -33,6 +64,16 @@ header {
       font-size: 24px;
       color: $notSelectedLink;
       cursor: pointer;
+      font-weight: 700;
+    }
+    li:hover {
+      color: black;
+    }
+    span {
+      color: $softGray;
+      font-weight: 700;
+      cursor: default;
+      font-size: 20px;
     }
   }
   .selected {
@@ -41,8 +82,115 @@ header {
 }
 
 h1 {
-    font-size: 48px;
-    color: $norseYellow;
+  font-size: 48px;
+  color: $norseYellow;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.foundationsCard {
+  border: black 1px solid;
+  padding: 50px;
+  border-radius: 10px;
+  margin: 100px 0;
+  border: none;
+  box-shadow: 0 0 30px $softGray;
+  p {
+    font-family: $bodyFont;
+  }
+  .cardTop {
+    border-bottom: 1px #a3a3a3 solid;
+    padding-bottom: 30px;
+  }
+  @include cardFormat();
+}
+
+hr {
+  width: 66%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.verticalCard {
+  opacity: 1;
+  border: none;
+  border-radius: 15px;
+  margin: 100px 0;
+  padding: 30px;
+  box-shadow: 0 0 30px $softGray;
+  @include cardFormat();
+  .cardTitle {
     text-align: center;
-    padding-top: 100px;
+    height: 70px;
+  }
+  button {
+    padding: 15px;
+    cursor: pointer;
+  }
+  .cardSubtitle {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+  }
+  a {
+    color: $norseYellow;
+    cursor: pointer;
+  }
+}
+.leftCard {
+  margin-right: 20px;
+}
+.rightCard {
+  margin-left: 20px;
+}
+
+.backgroundImage {
+  position: relative;
+}
+
+.backgroundImage ::after {
+  content: "";
+  background: url(../images/background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.05;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+footer {
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  .logoDiv {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .logo {
+    width: 30px;
+    cursor: pointer;
+  }
+  .TOP {
+    font-size: 28px;
+    color: #4a4a4a;
+    font-family: $norseFont;
+    color: $norseYellow;
+  }
+  .footerLinks {
+    font-weight: 700;
+    font-size: 20px;
+    color: $softGray;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  .footerLinks p:hover {
+    color: black;
+  }
 }

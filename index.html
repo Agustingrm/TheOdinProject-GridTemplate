@@ -9,16 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="./Assets/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <header class="grid">
-      <img src="Assets/images/Odin Logo.svg" alt="Odin Logo" class="column-start-2" />
+      <img src="Assets/images/odinLogo.svg" alt="Odin Logo" class="column-start-2" />
       <p class="column-start-3 column-end-6 TOP">THE ODIN PROJECT</p>
       <ul class="grid column-start-7 column-end-13">
         <li class="column-start-1 column-end-3">My Path</li>
         <li class="column-start-3 column-end-5 selected">All Paths</li>
         <li class="column-start-5 column-end-7">Community</li>
-        <li class="column-start-7 column-end-8">|</li>
+        <span class="column-start-7 column-end-8 separator">|</span>
         <li class="column-start-8 column-end-10">Sign In</li>
         <li class="column-start-10 column-end-12">Log in</li>
       </ul>
@@ -26,19 +27,71 @@
     <section>
       <h1>All Paths</h1>
     </section>
-    <section class="grid foundations">
-      <div class="column-start-3 column-end-11">
-        <div class="grid">
-            <p class="column-start-1 column-end-4">FOUNDATIONS</p>
-            <p class="column-start-1 column-end-4">Start Here</p>
-            <button class="column-start-11 column-end-13 row-start-1 row-end-3">Select</button>
+    <section>
+      <div class="grid foundations">
+        <div class="column-start-3 column-end-11 foundationsCard">
+          <div class="grid cardTop">
+            <p class="column-start-1 column-end-4 cardTitle">FOUNDATIONS</p>
+            <p class="column-start-1 column-end-8 cardSubtitle">Start Here</p>
+            <button class="column-start-10 column-end-13 row-start-1 row-end-3">Select</button>
+          </div>
+          <p class="cardBottom">
+            This is where it all begins! A hands-on introduction to all of the essential tools you'll need to build real, working websites. You'll learn what
+            web developers actually do – the foundations you'll need for later courses.
+          </p>
         </div>
-        <hr />
-        <p>
-          This is where it all begins! A hands-on introduction to all of the essential tools you'll need to build real, working websites. You'll learn what web
-          developers actually do – the foundations you'll need for later courses.
-        </p>
+      </div>
+      <hr>
+      <div class="grid backgroundImage">
+        <div class="grid column-start-3 column-end-7">
+          <div class="column-start-1 column-end-13 verticalCard leftCard">
+            <div class="grid cardTop">
+              <p class="column-start-1 column-end-13 row-start-1 row-end-2 cardTitle">Full Stack Ruby on Rails</p>
+              <button class="column-start-4 column-end-10 row-start-3 row-end-4">Select</button>
+              <p class="column-start-1 column-end-13 row-start-5 row-end-6 cardSubtitle">Prerequisites: <a>Foundations</a></p>
+            </div>
+            <p class="cardBottom">
+              This path is intended to be taken after you have completed the Foundations course. This path takes you through our entire Ruby on Rails
+              curriculum. The courses should be taken in the order that they are displayed. You'll learn everything you need to know to create beautiful
+              responsive websites from scratch.
+            </p>
+          </div>
+        </div>
+        <div class="grid column-start-7 column-end-11">
+          <div class="column-start-1 column-end-13 verticalCard rightCard">
+            <div class="grid cardTop">
+              <p class="column-start-1 column-end-13 row-start-1 row-end-2 cardTitle">Full Stack JavaScript</p>
+              <button class="column-start-4 column-end-10 row-start-3 row-end-4">Select</button>
+              <p class="column-start-1 column-end-13 row-start-5 row-end-6 cardSubtitle">Prerequisites: <a>Foundations</a></p>
+            </div>
+            <p class="cardBottom">
+              This path is intended to be taken after you have completed the Foundations course. This path takes you through our entire JavaScript curriculum.
+              The courses should be taken in the order that they are displayed. You'll learn everything you need to know to create beautiful responsive websites
+              from scratch using JavaScript and NodeJs.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
+    <footer class="grid">
+      <img src="Assets/images/odinLogo.svg" alt="Odin Logo" class="column-start-2" />
+      <p class="column-start-3 column-end-6 TOP">THE ODIN PROJECT</p>
+      <div class="column-start-6 column-end-9 logoDiv">
+        <img src="Assets/images/githubLogo.svg" alt="github" class="logo" />
+        <img src="Assets/images/discordLogo.svg" alt="discord" class="logo" />
+        <img src="Assets/images/facebookLogo.svg" alt="facebook" class="logo" />
+        <img src="Assets/images/twitterLogo.svg" alt="twitter" class="logo" />
+      </div>
+      <div class='column-start-10 column-end-11 footerLinks '>
+        <p>About</p>
+        <p>FAQ</p>
+        <p>Blog</p>
+      </div>
+      <div class='column-start-11 column-end-13 footerLinks'>
+        <p>Success Stories</p>
+        <p>Contribute</p>
+        <p>Terms of Use</p>
+      </div>
+    </footer>
   </body>
 </html>

@@ -14,6 +14,7 @@ header .TOP {
   font-family: "Caesar Dressing", cursive;
   color: #cc9543;
   cursor: pointer;
+  justify-self: left;
 }
 header img {
   height: 60px;
@@ -29,6 +30,16 @@ header ul li {
   font-size: 24px;
   color: #4a4a4ab3;
   cursor: pointer;
+  font-weight: 700;
+}
+header ul li:hover {
+  color: black;
+}
+header ul span {
+  color: #4a4a4a;
+  font-weight: 700;
+  cursor: default;
+  font-size: 20px;
 }
 header .selected {
   color: #000;
@@ -39,6 +50,165 @@ h1 {
   color: #cc9543;
   text-align: center;
   padding-top: 100px;
+}
+
+.foundationsCard {
+  border: black 1px solid;
+  padding: 50px;
+  border-radius: 10px;
+  margin: 100px 0;
+  border: none;
+  box-shadow: 0 0 30px #4a4a4a;
+  background-color: white;
+}
+.foundationsCard p {
+  font-family: "Open Sans", sans-serif;
+}
+.foundationsCard .cardTop {
+  border-bottom: 1px #a3a3a3 solid;
+  padding-bottom: 30px;
+}
+.foundationsCard .cardTitle {
+  font-size: 34px;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+.foundationsCard .cardSubtitle {
+  font-size: 32px;
+  color: #4a4a4a;
+}
+.foundationsCard button {
+  background: none;
+  background-color: #cc9543;
+  font-size: 28px;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+}
+.foundationsCard .cardBottom {
+  padding: 30px 0;
+  font-size: 26px;
+  line-height: 40px;
+  color: #4a4a4a;
+}
+
+hr {
+  width: 66%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.verticalCard {
+  opacity: 1;
+  border: none;
+  border-radius: 15px;
+  margin: 100px 0;
+  padding: 30px;
+  box-shadow: 0 0 30px #4a4a4a;
+  background-color: white;
+}
+.verticalCard .cardTitle {
+  font-size: 34px;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+.verticalCard .cardSubtitle {
+  font-size: 32px;
+  color: #4a4a4a;
+}
+.verticalCard button {
+  background: none;
+  background-color: #cc9543;
+  font-size: 28px;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+}
+.verticalCard .cardBottom {
+  padding: 30px 0;
+  font-size: 26px;
+  line-height: 40px;
+  color: #4a4a4a;
+}
+.verticalCard .cardTitle {
+  text-align: center;
+  height: 70px;
+}
+.verticalCard button {
+  padding: 15px;
+  cursor: pointer;
+}
+.verticalCard .cardSubtitle {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+}
+.verticalCard a {
+  color: #cc9543;
+  cursor: pointer;
+}
+
+.leftCard {
+  margin-right: 20px;
+}
+
+.rightCard {
+  margin-left: 20px;
+}
+
+.backgroundImage {
+  position: relative;
+}
+
+.backgroundImage ::after {
+  content: "";
+  background: url(../images/background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.05;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+footer {
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+footer .logoDiv {
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .logo {
+  width: 30px;
+  cursor: pointer;
+}
+footer .TOP {
+  font-size: 28px;
+  color: #4a4a4a;
+  font-family: "Caesar Dressing", cursive;
+  color: #cc9543;
+}
+footer .footerLinks {
+  font-weight: 700;
+  font-size: 20px;
+  color: #4a4a4a;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+footer .footerLinks p {
+  margin-bottom: 10px;
+}
+footer .footerLinks p:hover {
+  color: black;
 }
 
 /*# sourceMappingURL=index.css.map */
