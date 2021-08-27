@@ -1,5 +1,5 @@
-@import url(../framework/reset.css);
-@import url(../framework/framework.css);
+@import url(../predefinedSystem/reset.css);
+@import url(../predefinedSystem/predefinedSystem.css);
 
 $norseFont: "Caesar Dressing", cursive;
 $bodyFont: "Open Sans", sans-serif;
@@ -10,18 +10,18 @@ $notSelectedLink: #4a4a4ab3;
 @mixin cardFormat {
   background-color: white;
   .cardTitle {
-    font-size: 34px;
+    font-size: 26px;
     font-weight: 700;
     color: $softGray;
   }
   .cardSubtitle {
-    font-size: 32px;
+    font-size: 24px;
     color: $softGray;
   }
   button {
     background: none;
     background-color: $norseYellow;
-    font-size: 28px;
+    font-size: 20px;
     border: none;
     border-radius: 15px;
     color: #fff;
@@ -29,8 +29,8 @@ $notSelectedLink: #4a4a4ab3;
     cursor: pointer;
   }
   .cardBottom {
-    padding: 30px 0;
-    font-size: 26px;
+    padding: 30px 0 0;
+    font-size: 18px;
     line-height: 40px;
     color: $softGray;
   }
@@ -45,7 +45,7 @@ header {
   justify-items: center;
   padding-top: 10px;
   .TOP {
-    font-size: 36px;
+    font-size: 32px;
     font-family: $norseFont;
     color: $norseYellow;
     cursor: pointer;
@@ -61,7 +61,7 @@ header {
     align-items: center;
     justify-items: center;
     li {
-      font-size: 24px;
+      font-size: 18px;
       color: $notSelectedLink;
       cursor: pointer;
       font-weight: 700;
@@ -69,12 +69,13 @@ header {
     li:hover {
       color: black;
     }
-    span {
-      color: $softGray;
-      font-weight: 700;
-      cursor: default;
-      font-size: 20px;
+    .community {
+      padding-right: 15px;
+      border-right: 1px solid $notSelectedLink;
     }
+  }
+  .menuIcon {
+    display: none;
   }
   .selected {
     color: #000;
@@ -82,7 +83,7 @@ header {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 36px;
   color: $norseYellow;
   text-align: center;
   padding-top: 100px;
@@ -127,7 +128,7 @@ hr {
     cursor: pointer;
   }
   .cardSubtitle {
-    font-size: 24px;
+    font-size: 19px;
     text-align: center;
     font-weight: 700;
   }
@@ -192,5 +193,125 @@ footer {
   }
   .footerLinks p:hover {
     color: black;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  header {
+    .TOP {
+      font-size: 24px;
+    }
+    ul {
+      li {
+        font-size: 14px;
+        margin: 0 5px;
+      }
+    }
+  }
+  .foundationsCard {
+    margin: 30px 0;
+    .cardTitle {
+      grid-row: 1/2;
+      grid-column: 1/13;
+      text-align: center;
+      height: 30px;
+    }
+    button {
+      grid-row: 2/3;
+      grid-column: 4/10;
+    }
+    .cardSubtitle {
+      grid-row: 3/4;
+      grid-column: 1/13;
+      text-align: center;
+    }
+  }
+  h1 {
+    padding: 50px 0 30px;
+  }
+  hr {
+    display: none;
+  }
+
+  .verticalCard {
+    margin: 30px 0;
+    .cardTitle {
+      height: auto;
+    }
+  }
+  .leftContainer {
+    grid-column: 3/11;
+  }
+
+  .leftCard {
+    margin-right: 0;
+  }
+  .rightContainer {
+    grid-column: 3/11;
+  }
+  .rightCard {
+    margin-left: 0;
+  }
+  footer {
+    .TOP,
+    .TOPLogo {
+      display: none;
+    }
+    .logoDiv {
+      grid-column: 2/6;
+    }
+    .shortLinks {
+      grid-column: 7/10;
+    }
+    .longLinks {
+      grid-column: 10/11;
+    }
+  }
+}
+@media all and (max-width: 750px) {
+  header {
+    .TOP {
+      grid-column: 4/11;
+    }
+    ul {
+      li {
+        display: none;
+      }
+    }
+    .menuIcon {
+      display: inline;
+      width: 30px;
+    }
+  }
+  .foundationsCard {
+    grid-column: 1/13;
+  }
+  .verticalCard {
+    border-radius: 0;
+  }
+  .leftContainer {
+    grid-column: 1/13;
+  }
+  .rightContainer {
+    grid-column: 1/13;
+  }
+
+  footer {
+    .logoDiv {
+      grid-column: 4/10;
+      padding-bottom: 50px;
+    }
+    .shortLinks {
+      grid-column: 4/6;
+      grid-row: 2/3;
+      align-self: flex-start;
+      font-size: 16px;
+    }
+    .longLinks {
+      grid-column: 7/10;
+      grid-row: 2/3;
+      align-self: flex-start;
+      font-size: 16px;
+    }
   }
 }

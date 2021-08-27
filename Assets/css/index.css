@@ -1,5 +1,5 @@
-@import url(../framework/reset.css);
-@import url(../framework/framework.css);
+@import url(../predefinedSystem/reset.css);
+@import url(../predefinedSystem/predefinedSystem.css);
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -10,7 +10,7 @@ header {
   padding-top: 10px;
 }
 header .TOP {
-  font-size: 36px;
+  font-size: 32px;
   font-family: "Caesar Dressing", cursive;
   color: #cc9543;
   cursor: pointer;
@@ -27,7 +27,7 @@ header ul {
   justify-items: center;
 }
 header ul li {
-  font-size: 24px;
+  font-size: 18px;
   color: #4a4a4ab3;
   cursor: pointer;
   font-weight: 700;
@@ -35,18 +35,19 @@ header ul li {
 header ul li:hover {
   color: black;
 }
-header ul span {
-  color: #4a4a4a;
-  font-weight: 700;
-  cursor: default;
-  font-size: 20px;
+header ul .community {
+  padding-right: 15px;
+  border-right: 1px solid #4a4a4ab3;
+}
+header .menuIcon {
+  display: none;
 }
 header .selected {
   color: #000;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 36px;
   color: #cc9543;
   text-align: center;
   padding-top: 100px;
@@ -69,18 +70,18 @@ h1 {
   padding-bottom: 30px;
 }
 .foundationsCard .cardTitle {
-  font-size: 34px;
+  font-size: 26px;
   font-weight: 700;
   color: #4a4a4a;
 }
 .foundationsCard .cardSubtitle {
-  font-size: 32px;
+  font-size: 24px;
   color: #4a4a4a;
 }
 .foundationsCard button {
   background: none;
   background-color: #cc9543;
-  font-size: 28px;
+  font-size: 20px;
   border: none;
   border-radius: 15px;
   color: #fff;
@@ -88,8 +89,8 @@ h1 {
   cursor: pointer;
 }
 .foundationsCard .cardBottom {
-  padding: 30px 0;
-  font-size: 26px;
+  padding: 30px 0 0;
+  font-size: 18px;
   line-height: 40px;
   color: #4a4a4a;
 }
@@ -109,18 +110,18 @@ hr {
   background-color: white;
 }
 .verticalCard .cardTitle {
-  font-size: 34px;
+  font-size: 26px;
   font-weight: 700;
   color: #4a4a4a;
 }
 .verticalCard .cardSubtitle {
-  font-size: 32px;
+  font-size: 24px;
   color: #4a4a4a;
 }
 .verticalCard button {
   background: none;
   background-color: #cc9543;
-  font-size: 28px;
+  font-size: 20px;
   border: none;
   border-radius: 15px;
   color: #fff;
@@ -128,8 +129,8 @@ hr {
   cursor: pointer;
 }
 .verticalCard .cardBottom {
-  padding: 30px 0;
-  font-size: 26px;
+  padding: 30px 0 0;
+  font-size: 18px;
   line-height: 40px;
   color: #4a4a4a;
 }
@@ -142,7 +143,7 @@ hr {
   cursor: pointer;
 }
 .verticalCard .cardSubtitle {
-  font-size: 24px;
+  font-size: 19px;
   text-align: center;
   font-weight: 700;
 }
@@ -209,6 +210,125 @@ footer .footerLinks p {
 }
 footer .footerLinks p:hover {
   color: black;
+}
+
+@media all and (max-width: 1000px) {
+  header .TOP {
+    font-size: 24px;
+  }
+  header ul li {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+
+  .foundationsCard {
+    margin: 30px 0;
+  }
+  .foundationsCard .cardTitle {
+    grid-row: 1/2;
+    grid-column: 1/13;
+    text-align: center;
+    height: 30px;
+  }
+  .foundationsCard button {
+    grid-row: 2/3;
+    grid-column: 4/10;
+  }
+  .foundationsCard .cardSubtitle {
+    grid-row: 3/4;
+    grid-column: 1/13;
+    text-align: center;
+  }
+
+  h1 {
+    padding: 50px 0 30px;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .verticalCard {
+    margin: 30px 0;
+  }
+  .verticalCard .cardTitle {
+    height: auto;
+  }
+
+  .leftContainer {
+    grid-column: 3/11;
+  }
+
+  .leftCard {
+    margin-right: 0;
+  }
+
+  .rightContainer {
+    grid-column: 3/11;
+  }
+
+  .rightCard {
+    margin-left: 0;
+  }
+
+  footer .TOP,
+footer .TOPLogo {
+    display: none;
+  }
+  footer .logoDiv {
+    grid-column: 2/6;
+  }
+  footer .shortLinks {
+    grid-column: 7/10;
+  }
+  footer .longLinks {
+    grid-column: 10/11;
+  }
+}
+@media all and (max-width: 750px) {
+  header .TOP {
+    grid-column: 4/11;
+  }
+  header ul li {
+    display: none;
+  }
+  header .menuIcon {
+    display: inline;
+    width: 30px;
+  }
+
+  .foundationsCard {
+    grid-column: 1/13;
+  }
+
+  .verticalCard {
+    border-radius: 0;
+  }
+
+  .leftContainer {
+    grid-column: 1/13;
+  }
+
+  .rightContainer {
+    grid-column: 1/13;
+  }
+
+  footer .logoDiv {
+    grid-column: 4/10;
+    padding-bottom: 50px;
+  }
+  footer .shortLinks {
+    grid-column: 4/6;
+    grid-row: 2/3;
+    align-self: flex-start;
+    font-size: 16px;
+  }
+  footer .longLinks {
+    grid-column: 7/10;
+    grid-row: 2/3;
+    align-self: flex-start;
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
